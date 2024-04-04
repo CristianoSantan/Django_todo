@@ -1,4 +1,4 @@
-FROM python:3.8.7-alpine3.12
+FROM python:3.8.7-slim-buster
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED 1
