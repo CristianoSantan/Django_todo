@@ -1,11 +1,11 @@
-FROM python:3.8.7-slim-buster
+FROM python:3.8.7-alpine3.12
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # install system dependencies
-RUN apt-get update && apt-get install -y pkg-config
+RUN apk update && apk add pkgconf
 
 # install dependencies
 RUN pip install --upgrade pip
